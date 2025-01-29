@@ -6,13 +6,13 @@ const AddressList = () => {
     const [search, setSearch] = useState("");
 
     const fetchAddresses = async () => {
-        const res = await axios.get("http://localhost:5000/api/addresses");
+        const res = await axios.get("https://assignment5-ukiu.onrender.com/api/addresses");
         setAddresses(res.data);
     };
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/addresses/${id}`);
+            await axios.delete(`https://assignment5-ukiu.onrender.com/api/addresses/${id}`);
             // Update the local state by removing the deleted address
             setAddresses(addresses.filter((address) => address._id !== id));
         } catch (error) {
