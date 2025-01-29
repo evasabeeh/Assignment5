@@ -56,7 +56,7 @@ const AddressForm = ({ fetchAddresses }) => {
         setError("");
 
         try {
-            await axios.post("http://localhost:5000/api/addresses", formData);
+            await axios.post("https://assignment5-ukiu.onrender.com/api/addresses", formData);
             fetchAddresses();
             setFormData({
                 addressLine1: "",
