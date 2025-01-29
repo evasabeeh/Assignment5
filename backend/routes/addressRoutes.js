@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-// Get Addresses
+// Fetch Addresses
 router.get("/", async (req, res) => {
     const addresses = await Address.find();
     res.json(addresses);
@@ -40,7 +40,6 @@ router.delete("/:id", async (req, res) => {
     const { id } = req.params;
 
     try {
-        // Find the address by ID and delete it
         const deletedAddress = await Address.findByIdAndDelete(id);
         if (!deletedAddress) {
             return res.status(404).json({ message: "Address not found" });

@@ -5,13 +5,11 @@ const AddressList = () => {
     const [addresses, setAddresses] = useState([]);
     const [search, setSearch] = useState("");
 
-    // Fetch addresses from the backend
     const fetchAddresses = async () => {
         const res = await axios.get("http://localhost:5000/api/addresses");
         setAddresses(res.data);
     };
 
-    // Delete an address
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:5000/api/addresses/${id}`);
@@ -37,9 +35,7 @@ const AddressList = () => {
             />
             </div>
 
-            {/* Card Style Wrapper */}
             <div className="overflow-x-auto p-4 bg-white rounded-lg shadow-lg mt-4">
-                {/* Table */}
                 <table className="w-full border-collapse table-auto">
                     <thead>
                         <tr className="bg-gray-100">
