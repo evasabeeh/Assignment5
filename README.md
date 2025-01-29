@@ -22,18 +22,16 @@
 
 ## Steps to setup
 
-- mkdir smart-address-book
-
-- npm create vite@latest frontend -- --template react
-- cd frontend
-- npm install
-- npm install axios react-router-dom
-- npm run dev
-
-- mkdir backend
-- cd backend
-- npm init
-- npm install express mongoose cors dotenv axios
+1. mkdir smart-address-book
+2. npm create vite@latest frontend -- --template react
+3. cd frontend
+4. npm install
+5. npm install axios react-router-dom
+6. npm run dev
+7. mkdir backend
+8. cd backend
+9. npm init
+10. npm install express mongoose cors dotenv axios
 
 ## Imp
 
