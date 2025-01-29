@@ -16,4 +16,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use("/api/addresses", addressRoutes);
 
+app.get("/", (req, res) => {
+    res.send("API is configuring.")
+});
+
 app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
